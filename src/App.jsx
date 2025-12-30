@@ -8,6 +8,7 @@ import Memories from './pages/Memories/Memories'
 import Letter from './pages/Letter/Letter'
 import Future from './pages/Future/Future'
 import NotFound from './pages/NotFound/NotFound'
+import Photos from './pages/Photos/Photos'
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
         <Route path='/memories' element={<Memories/>} />
         <Route path='/letter' element={<Letter/>} />
         <Route path='/future' element={<Future/>} />
+        <Route path='/photos' element={<Photos/>} />
         <Route path='*' element={<NotFound/>} />
       </Routes>
       {/* <Footer/> */}

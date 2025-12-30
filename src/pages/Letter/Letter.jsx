@@ -228,7 +228,7 @@ export default function Letter() {
           className="mt-4 bg-gradient-to-r from-rose-500 to-pink-500 hover:from-rose-600 hover:to-pink-600 text-white px-5 py-2.5 rounded-xl flex items-center gap-2 mx-auto"
         >
           <Share2 size={18} />
-          Share All Notes 💌
+          Share All Diary 💌
         </button>
       </section>
 
@@ -272,7 +272,7 @@ export default function Letter() {
             rows={6}
             value={text}
             onChange={(e) => setText(e.target.value)}
-            placeholder="Write something you feel deeply…"
+            placeholder="Oi, ekhane kichu likho…"
             className={`w-full rounded-xl p-4 outline-none font-serif text-lg resize-none ${
               THEMES[theme].text
             } bg-${theme === 'night' ? 'gray-800' : 'gray-50'} border border-gray-200 focus:border-rose-300`}
@@ -340,7 +340,7 @@ export default function Letter() {
               onClick={addEntry}
               className="bg-gradient-to-r from-rose-500 to-pink-500 hover:from-rose-600 hover:to-pink-600 text-white px-6 py-2.5 rounded-xl font-medium transition-all hover:scale-105"
             >
-              Save Letter
+              Save Diary
             </button>
           </div>
         </div>
