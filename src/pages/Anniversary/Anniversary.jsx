@@ -40,7 +40,7 @@ const Anniversary = () => {
           <Heart className="text-rose-500" size={36} />
         </div>
         <h1 className="text-3xl sm:text-4xl font-semibold text-gray-900">
-          Our Anniversary
+          Our Roadmap
         </h1>
         <p className="mt-4 text-gray-600 max-w-md mx-auto text-sm">
           A timeline of love, memories, and moments that made us stronger.
