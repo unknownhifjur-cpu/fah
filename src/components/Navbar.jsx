@@ -149,7 +149,7 @@ const Navbar = () => {
                 <div className="h-20 px-6 flex items-center justify-between border-b border-white/10">
                   <div className="flex items-center gap-3">
                     <img
-                      src="/public/image/c2bg.png"
+                      src="/image/c2bg.png"
                       alt="Logo"
                       className="h-10 w-10 rounded-full border-2 border-white/20"
                     />
