@@ -6,17 +6,17 @@ const Home = () => {
 
   const images = [
    
-  { src: "/public/image/8.jpg",  title: "Casual Charm", description: "Simple look, endless charm" },
-  { src: "/public/image/3.jpg",  title: "That Smile", description: "A smile that stays with me" },
-  { src: "/public/image/6.jpg",  title: "Grace in Saree", description: "Elegance in every fold" },
-  { src: "/public/image/9.jpg",  title: "Ariya", description: "The calm in my chaos" },
-  { src: "/public/image/13.jpeg", title: "Her Aura", description: "You feel it before you see it" },
-  { src: "/public/image/20.jpg",  title: "Stillness", description: "Peace captured in a frame" },
-  { src: "/public/image/29.jpg",  title: "Subtle Glow", description: "Nothing loud, everything perfect" },
-  { src: "/public/image/31.jpg",  title: "Eyes Speak", description: "Stories hidden in her eyes" },
-  { src: "/public/image/34.jpg",  title: "Natural Frame", description: "No filter, just her" },
-  { src: "/public/image/36.jpeg", title: "Lasting Impression", description: "Hard to forget, easy to admire" },
-  { src: "/public/image/marry.jpg", title: "Future Wedding", description: "This is our marriage" },
+  { src: "/image/8.jpg",  title: "Casual Charm", description: "Simple look, endless charm" },
+  { src: "/image/3.jpg",  title: "That Smile", description: "A smile that stays with me" },
+  { src: "/image/6.jpg",  title: "Grace in Saree", description: "Elegance in every fold" },
+  { src: "/image/9.jpg",  title: "Ariya", description: "The calm in my chaos" },
+  { src: "/image/13.jpeg", title: "Her Aura", description: "You feel it before you see it" },
+  { src: "/image/20.jpg",  title: "Stillness", description: "Peace captured in a frame" },
+  { src: "/image/29.jpg",  title: "Subtle Glow", description: "Nothing loud, everything perfect" },
+  { src: "/image/31.jpg",  title: "Eyes Speak", description: "Stories hidden in her eyes" },
+  { src: "/image/34.jpg",  title: "Natural Frame", description: "No filter, just her" },
+  { src: "/image/36.jpeg", title: "Lasting Impression", description: "Hard to forget, easy to admire" },
+  { src: "/image/marry.jpg", title: "Future Wedding", description: "This is our marriage" },
   ];
 
   const memories = [
