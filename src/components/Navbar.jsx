@@ -54,7 +54,7 @@ const Navbar = () => {
                 transition={{ duration: 3, repeat: Infinity }}
               />
               <img
-                src="/public/image/c2bg.png"
+                src="/image/c2bg.png"
                 alt="Logo"
                 className="relative h-10 w-10 lg:h-12 lg:w-12 rounded-full border-2 border-white/20 group-hover:border-white/40 transition-colors"
               />
