@@ -14,7 +14,7 @@ const Memories = () => {
     return savedMemories ? JSON.parse(savedMemories) : [
       {
         id: 1,
-        image: "https://i.pinimg.com/736x/a2/ef/d6/a2efd664e9b1ae6679ad18599ef09c2a.jpg", // Your own image
+        image: "/image/9.jpg", // Your own image
         title: "First Meet 💕",
         date: "15 March 2023",
         likes: 152,
@@ -25,7 +25,7 @@ const Memories = () => {
       },
       {
         id: 2,
-        image: "https://wallpaperbat.com/img/492674-cute-girl-art-4k-iphone-hd-4k-wallpaper-image-background-photo-and-picture.jpg", // Your own image
+        image: "/image/8.jpg", // Your own image
         title: "Mountain Trip 🌄",
         date: "10 July 2023",
         likes: 198,
@@ -36,7 +36,7 @@ const Memories = () => {
       },
       {
         id: 3,
-        image: "/images/memory3.jpg", // Your own image
+        image: "/image/7.jpg", // Your own image
         title: "Coffee Date ☕",
         date: "02 Jan 2024",
         likes: 234,
@@ -47,7 +47,7 @@ const Memories = () => {
       },
       {
         id: 4,
-        image: "/images/memory4.jpg", // Your own image
+        image: "/image/6.jpg", // Your own image
         title: "Beach Sunset 🌅",
         date: "25 May 2024",
         likes: 189,
