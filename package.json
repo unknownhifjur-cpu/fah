@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.18",
+    "@vercel/analytics": "^1.6.1",
     "cross-cat": "^1.0.0",
     "emoji-picker-react": "^4.16.1",
     "framer-motion": "^12.23.26",
@@ -33,3 +34,4 @@
     "vite": "^7.2.4"
   }
 }
+
