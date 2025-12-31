@@ -62,6 +62,78 @@ const loveSongs = [
     src: "/music/kal.mp3",
     duration: "6:19"
   },
+  {
+    title: "Agar Tum Sath Ho",
+    artist: "Fahamida",
+    src: "/music/agartum.mp3",
+    duration: "5:42"
+  },
+  {
+    title: "Chamma Chamma",
+    artist: "Fahamida",
+    src: "/music/chammachamma.mp3",
+    duration: "2:54"
+  },
+  {
+    title: "Chhod Diya Wo Rasta",
+    artist: "Fahamida",
+    src: "/music/chhodDiya.mp3",
+    duration: "5:59"
+  },
+  {
+    title: "Hasi",
+    artist: "Fahamida",
+    src: "/music/hasi.mp3",
+    duration: "4:18"
+  },
+  {
+    title: "Choliya Ke Hukk",
+    artist: "Fahamida",
+    src: "/music/choliyaK.mp3",
+    duration: "7:06"
+  },
+  {
+    title: "Hua Hai Aaj",
+    artist: "Fahamida",
+    src: "/music/huaHaiAaj.mp3",
+    duration: "6:23"
+  },
+  {
+    title: "Kabhi Jo Badal",
+    artist: "Fahamida",
+    src: "/music/kabhiJo.mp3",
+    duration: "5:22"
+  },
+  {
+    title: "Kal Jo Na Tujhse",
+    artist: "Fahamida",
+    src: "/music/kal.mp3",
+    duration: "6:21"
+  },
+  {
+    title: "Komariya Dole Gole",
+    artist: "Fahamida",
+    src: "/music/kamariyaDole.mp3",
+    duration: "3:44"
+  },
+  {
+    title: "Mareez-e-Ishq",
+    artist: "Fahamida",
+    src: "/music/mareezIshq.mp3",
+    duration: "5:07"
+  },
+  {
+    title: "Pyar Karte Ho Na",
+    artist: "Fahamida",
+    src: "/music/pyarKarte.mp3",
+    duration: "3:23"
+  },
+  {
+    title: "Teri Sansoon Mein",
+    artist: "Fahamida",
+    src: "/music/teriSanson.mp3",
+    duration: "6:03"
+  },
 ];
 
 /* ================= MUSIC PLAYER ================= */
