@@ -60,32 +60,62 @@ const MusicPlayer = () => {
   const [duration, setDuration] = useState(0);
   const [volume, setVolume] = useState(0.7);
   const [currentSongIndex, setCurrentSongIndex] = useState(0);
-  const audioRef = useRef(null);
+  const audioRef = useRef(new Audio());
 
   const currentSong = loveSongs[currentSongIndex];
 
   useEffect(() => {
     const audio = audioRef.current;
     
+    // Set initial volume
+    audio.volume = volume;
+    audio.src = currentSong.src;
+    
+    // If was playing before song change, continue playing
+    if (isPlaying) {
+      audio.play().catch(e => console.log("Autoplay prevented:", e));
+    }
+
     const updateTime = () => setCurrentTime(audio.currentTime);
     const updateDuration = () => setDuration(audio.duration);
+    const handleEnded = () => playNext();
+    const handlePlay = () => setIsPlaying(true);
+    const handlePause = () => setIsPlaying(false);
     
     audio.addEventListener('timeupdate', updateTime);
     audio.addEventListener('loadedmetadata', updateDuration);
+    audio.addEventListener('ended', handleEnded);
+    audio.addEventListener('play', handlePlay);
+    audio.addEventListener('pause', handlePause);
     
     return () => {
       audio.removeEventListener('timeupdate', updateTime);
       audio.removeEventListener('loadedmetadata', updateDuration);
+      audio.removeEventListener('ended', handleEnded);
+      audio.removeEventListener('play', handlePlay);
+      audio.removeEventListener('pause', handlePause);
     };
-  }, []);
+  }, [currentSongIndex]);
+
+  useEffect(() => {
+    // Update src when song changes
+    audioRef.current.src = currentSong.src;
+    
+    // If was playing, start new song
+    if (isPlaying) {
+      audioRef.current.play().catch(e => console.log("Play error:", e));
+    }
+  }, [currentSong]);
 
   const togglePlay = () => {
-    if (isPlaying) {
-      audioRef.current.pause();
+    if (audioRef.current.paused) {
+      audioRef.current.play().catch(e => {
+        console.log("Play error:", e);
+        setIsPlaying(false);
+      });
     } else {
-      audioRef.current.play();
+      audioRef.current.pause();
     }
-    setIsPlaying(!isPlaying);
   };
 
   const handleSeek = (e) => {
@@ -101,22 +131,22 @@ const MusicPlayer = () => {
   };
 
   const formatTime = (time) => {
-    if (isNaN(time)) return "0:00";
+    if (isNaN(time) || !isFinite(time)) return "0:00";
     const minutes = Math.floor(time / 60);
     const seconds = Math.floor(time % 60);
     return `${minutes}:${seconds.toString().padStart(2, '0')}`;
   };
 
   const playNext = () => {
-    setCurrentSongIndex((prev) => (prev + 1) % loveSongs.length);
+    const nextIndex = (currentSongIndex + 1) % loveSongs.length;
+    setCurrentSongIndex(nextIndex);
     setIsPlaying(true);
-    setTimeout(() => audioRef.current.play(), 100);
   };
 
   const playPrev = () => {
-    setCurrentSongIndex((prev) => (prev - 1 + loveSongs.length) % loveSongs.length);
+    const prevIndex = (currentSongIndex - 1 + loveSongs.length) % loveSongs.length;
+    setCurrentSongIndex(prevIndex);
     setIsPlaying(true);
-    setTimeout(() => audioRef.current.play(), 100);
   };
 
   return (
@@ -219,7 +249,6 @@ const MusicPlayer = () => {
             onClick={() => {
               setCurrentSongIndex(index);
               setIsPlaying(true);
-              setTimeout(() => audioRef.current.play(), 100);
             }}
             className={`p-3 rounded-xl cursor-pointer transition-all ${index === currentSongIndex ? 'bg-white shadow-md border border-rose-200' : 'hover:bg-white/50'}`}
           >
@@ -240,12 +269,6 @@ const MusicPlayer = () => {
           </div>
         ))}
       </div>
-
-      <audio
-        ref={audioRef}
-        src={currentSong.src}
-        onEnded={playNext}
-      />
     </div>
   );
 };
