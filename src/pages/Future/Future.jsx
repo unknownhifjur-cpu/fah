@@ -207,39 +207,36 @@ const MusicPlayer = () => {
       </div>
 
       {/* Controls */}
-      <div className="flex items-center justify-between mb-6">
-        <div className="flex items-center gap-2">
-          <Volume2 size={20} className="text-gray-600" />
-          <input
-            type="range"
-            min="0"
-            max="1"
-            step="0.01"
-            value={volume}
-            onChange={handleVolumeChange}
-            className="w-24 h-1.5 bg-rose-200 rounded-lg appearance-none cursor-pointer [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:h-4 [&::-webkit-slider-thumb]:w-4 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-rose-500"
-          />
-        </div>
-        
-        <div className="flex items-center gap-6">
-          <button onClick={playPrev} className="p-2 hover:bg-white/50 rounded-full transition-colors">
-            <SkipBack className="text-rose-500" size={24} />
-          </button>
-          <button
-            onClick={togglePlay}
-            className="p-4 bg-gradient-to-r from-rose-500 to-pink-500 text-white rounded-full hover:shadow-lg transition-all hover:scale-105"
-          >
-            {isPlaying ? <Pause size={28} /> : <Play size={28} />}
-          </button>
-          <button onClick={playNext} className="p-2 hover:bg-white/50 rounded-full transition-colors">
-            <SkipForward className="text-rose-500" size={24} />
-          </button>
-        </div>
-
-        <div className="text-xs text-gray-500">
-          {isPlaying ? "Playing" : "Paused"}
-        </div>
-      </div>
+      {/* Controls - Centered */}
+<div className="flex flex-col items-center mb-6">
+  <div className="flex items-center gap-6 mb-4">
+    <button onClick={playPrev} className="p-2 hover:bg-white/50 rounded-full transition-colors">
+      <SkipBack className="text-rose-500" size={24} />
+    </button>
+    <button
+      onClick={togglePlay}
+      className="p-4 bg-gradient-to-r from-rose-500 to-pink-500 text-white rounded-full hover:shadow-lg transition-all hover:scale-105"
+    >
+      {isPlaying ? <Pause size={28} /> : <Play size={28} />}
+    </button>
+    <button onClick={playNext} className="p-2 hover:bg-white/50 rounded-full transition-colors">
+      <SkipForward className="text-rose-500" size={24} />
+    </button>
+  </div>
+  
+  <div className="flex items-center gap-2 w-full max-w-xs">
+    <Volume2 size={20} className="text-gray-600" />
+    <input
+      type="range"
+      min="0"
+      max="1"
+      step="0.01"
+      value={volume}
+      onChange={handleVolumeChange}
+      className="flex-1 h-1.5 bg-rose-200 rounded-lg appearance-none cursor-pointer [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:h-4 [&::-webkit-slider-thumb]:w-4 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-rose-500"
+    />
+  </div>
+</div>
 
       {/* Song List */}
       <div className="space-y-2 max-h-40 overflow-y-auto pr-2">
