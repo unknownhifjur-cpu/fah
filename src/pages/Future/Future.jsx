@@ -49,7 +49,19 @@ const loveSongs = [
     artist: "Fahamida",
     src: "/music/uska.mp3",
     duration: "6:15"
-  }
+  },
+  {
+    title: "A Dill Hai Mushkil",
+    artist: "Fahamida",
+    src: "/music/dill.mp3",
+    duration: "5:15"
+  },
+  {
+    title: "Kal Jo Na Tujhse",
+    artist: "Fahamida",
+    src: "/music/kal.mp3",
+    duration: "6:19"
+  },
 ];
 
 /* ================= MUSIC PLAYER ================= */
