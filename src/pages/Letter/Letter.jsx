@@ -529,7 +529,7 @@ export default function Letter() {
 
             <button
               onClick={addEntry}
-              className="bg-gradient-to-r from-rose-500 to-pink-500 hover:from-rose-600 hover:to-pink-600 text-white px-6 py-2.5 rounded-xl font-medium transition-all hover:scale-105"
+              className="bg-gradient-to-r from-rose-500 to-pink-500 hover:from-rose-600 hover:to-pink-600 text-white px-6  py-2.5 rounded-xl font-medium transition-all hover:scale-105"
             >
               Save Diary
             </button>
