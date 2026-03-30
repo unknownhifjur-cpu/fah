@@ -24,7 +24,7 @@ const Navbar = () => {
   const navLinks = [
     { name: "Home", path: "/" },
     { name: "Our Journey", path: "/anniversary" },
-    { name: "BirthDay", path: "/memories" },
+    { name: "BirthDay", path: "/birthday" }, // <-- changed from /memories to /birthday
     { name: "Diary", path: "/letter" },
     { name: "Special", path: "/future" },
     { name: "Photos", path: "/photos" },
